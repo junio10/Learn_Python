@@ -5,7 +5,7 @@ class Fila:
         self.rear = None
         self.size = 0
               
-    def push(self, data):
+    def enqueue(self, data):
         new_node = no.Node(data)
         
         if self.front is None:
@@ -30,7 +30,7 @@ class Fila:
            
            
     
-    def pop(self):
+    def dequeue(self):
         if self.front is None:
             print("Fila Vazia")
         elif self.size == 1:
@@ -41,7 +41,7 @@ class Fila:
             self.front = self.front.next
             self.front.size -= 1
     
-    def Display(self):
+    def display(self):
         current = self.front
         
         if current is None:

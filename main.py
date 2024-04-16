@@ -1,10 +1,10 @@
 import ListaEnacadeada as lista
 import Pilha as pilha
 import Fila as fila
+import Pilha as stack
 
 
 lista = lista.LinkedList()
-pilha = pilha.Pilha()
 fila = fila.Fila()
 
 # pilha.Empilhar(1)
@@ -16,13 +16,15 @@ fila = fila.Fila()
 # pilha.Desempilhar()
 # pilha.Display()
 
-fila.push(1)
-fila.push(2)
-fila.push(3)
-fila.Display()
-fila.pop()
-fila.Display()
-fila.pop()
-fila.Display()
+
+### stack ####
+
+stack = stack.Pilha()
+stack.push(1)
+stack.push(2)
+stack.push(3)
+
+stack.pop()
+stack.pop()
 
 
