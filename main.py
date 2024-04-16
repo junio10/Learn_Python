@@ -27,4 +27,10 @@ stack.push(3)
 stack.pop()
 stack.pop()
 
+## fila
+fila.enqueue(1)
+fila.enqueue(2)
+fila.enqueue(3)
+
+
 

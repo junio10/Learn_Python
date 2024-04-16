@@ -32,15 +32,14 @@ class Pilha:
             self.ant = None
             self.length = 0
         else:
-            aux = self.top.next
-            ant = self.top
+            aux = self.top
+            ant = None
             while aux.next is not None:
                 ant = aux
                 aux = aux.next
             print(aux.data)
+            ant.next = None
             self.tail = ant
-            self.top.next = self.tail
-            self.length -= 1
             
             
                 
