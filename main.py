@@ -7,15 +7,6 @@ import Pilha as stack
 lista = lista.LinkedList()
 fila = fila.Fila()
 
-# pilha.Empilhar(1)
-# pilha.Empilhar(2)
-# pilha.Empilhar(3)
-# pilha.Display()
-
-# print("Desempilhando")
-# pilha.Desempilhar()
-# pilha.Display()
-
 
 ### stack ####
 
@@ -24,13 +15,21 @@ stack.push(1)
 stack.push(2)
 stack.push(3)
 
+print("LIFO")
 stack.pop()
 stack.pop()
 
+print("fila")
 ## fila
 fila.enqueue(1)
 fila.enqueue(2)
 fila.enqueue(3)
+fila.display()
+print("FIFO", end="\n")
+fila.dequeue()
+fila.dequeue()
+fila.dequeue()
+
 
 
 

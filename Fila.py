@@ -34,12 +34,14 @@ class Fila:
         if self.front is None:
             print("Fila Vazia")
         elif self.size == 1:
+            print(self.front.data)
             self.front = None
-            self.rear = None
+            self.rear = None            
             self.size = 0
         else:
+            print(self.front.data)
             self.front = self.front.next
-            self.front.size -= 1
+            self.size -= 1
     
     def display(self):
         current = self.front

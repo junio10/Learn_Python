@@ -40,6 +40,7 @@ class Pilha:
             print(aux.data)
             ant.next = None
             self.tail = ant
+            self.length -= 1
             
             
                 
