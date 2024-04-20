@@ -1,13 +1,21 @@
 import NodeArvore as no
-class arvore:
-    def _init_(self, no):
+class Arvore:
+    def __init__(self, no):
         self.root = no
-        
-    def insert(self, node, data):
-        if node is None:
-           new_node = no.NodeArvore(self, data, node.ant)
+                
+    def insert_Recursive(self, data, root):
+        if root is None:
+            return no.NodeArvore(data, root) 
         if self.root._data < data:
-           self.root.esq = no.NodeArvore(self, self.root.esq, data)
+           self.root.esq = insert_Recursive(self, data, root.esq)
         else:
-           self.root.dir = no.NodeArvore(self, self.root.dir, data)
+           self.root.dir = insert_Recursive(self, data, root.esq)
+        return root
+           
+    def insert(self, data):
+         self.root = insert_Recursive(self, data, self.root)
+           
+   
+
+
     
