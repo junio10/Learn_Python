@@ -29,9 +29,10 @@ import NodeArvore as no
 # fila.dequeue()
 # fila.dequeue()
 node = None
-node == no.NodeArvore(10, None)
-arvore.Arvore(node)
-arvore.Arvore.insert(5)
+node = no.NodeArvore(10, None)
+tree = arvore.Arvore(node)
+#print(tree.root.data)
+tree.insert(5)
 
 
 

@@ -6,14 +6,14 @@ class Arvore:
     def insert_Recursive(self, data, root):
         if root is None:
             return no.NodeArvore(data, root) 
-        if self.root._data < data:
-           self.root.esq = insert_Recursive(self, data, root.esq)
+        if root.data > data:
+           self.root.esq = self.insert_Recursive(data, root.left)
         else:
-           self.root.dir = insert_Recursive(self, data, root.esq)
+           self.root.dir = self.insert_Recursive(data, root.right)
         return root
            
     def insert(self, data):
-         self.root = insert_Recursive(self, data, self.root)
+         self.root = self.insert_Recursive(data, self.root)
            
    
 
