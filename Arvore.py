@@ -7,13 +7,25 @@ class Arvore:
         if root is None:
             return no.NodeArvore(data, root) 
         if root.data > data:
-           self.root.esq = self.insert_Recursive(data, root.left)
+           root.left = self.insert_Recursive(data, root.left)
         else:
-           self.root.dir = self.insert_Recursive(data, root.right)
+           root.right = self.insert_Recursive(data, root.right)
         return root
            
     def insert(self, data):
          self.root = self.insert_Recursive(data, self.root)
+         
+    def preOrder(self, root):
+        if root is not None:
+            print(root.data)
+            self.preOrder(root.left)
+            self.preOrder(root.right)
+            
+    def inOrder(self,root):
+        if root is not None:
+            self.inOrder(root.left)
+            print(root.data)
+            self.inOrder(root.right)
            
    
 

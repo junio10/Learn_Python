@@ -33,6 +33,11 @@ node = no.NodeArvore(10, None)
 tree = arvore.Arvore(node)
 #print(tree.root.data)
 tree.insert(5)
+tree.insert(6)
+tree.insert(11)
+tree.insert(12)
 
+tree.preOrder(tree.root)
+#tree.inOrder(tree.root)
 
 
