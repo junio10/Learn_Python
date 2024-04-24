@@ -26,6 +26,12 @@ class Arvore:
             self.inOrder(root.left)
             print(root.data)
             self.inOrder(root.right)
+            
+    def posOrder(self, root):
+        if root is not None:
+            self.posOrder(root.left)
+            self.posOrder(root.right)
+            print(root.data)
            
    
 
