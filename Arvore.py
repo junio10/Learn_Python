@@ -15,6 +15,21 @@ class Arvore:
     def insert(self, data):
          self.root = self.insert_Recursive(data, self.root)
          
+    def delete(self, data, root):
+        if root is not None:
+           if root.data == data:
+               root = None
+               if root.left is not None or root.right is not None:
+                   #para saber em qual filho do pai mexer no da direito ou na esquerda
+                   if root.ant.left.data == data:
+                       #fazer caso de substituicao recursiva
+                       root.ant.left = root.left
+                   else:                       
+                       return
+           else:
+               self.delete(data, root.left)
+               self.delete(data, root.right)
+         
     def preOrder(self, root):
         if root is not None:
             print(root.data)
