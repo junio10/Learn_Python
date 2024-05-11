@@ -33,6 +33,9 @@ print("fatiamento[inicio:fim:passo]")
 # Criando uma lista de exemplo
 lista = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+#indexacao inversa
+print(lista[-1], lista[-2], lista[-3], lista[-4], lista[-5])
+
 # Fatiamento básico
 print(lista[2:5])  # Saída: [2, 3, 4]
 
@@ -52,6 +55,7 @@ print(lista[5:])  # Saída: [5, 6, 7, 8, 9]
 print(lista[::-1])  # Saída: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 
 print(lista[-8::]) # Saída: [[2, 3, 4, 5, 6, 7, 8, 9]
+
 
 
 
